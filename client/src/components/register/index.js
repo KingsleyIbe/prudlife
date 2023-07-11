@@ -1,10 +1,10 @@
 import React from 'react';
-import Form from './Form';
+import Register from './Register';
 
 const index = () => {
   return (
     <div>
-      <Form />
+      <Register />
     </div>
   );
 };

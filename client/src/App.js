@@ -1,4 +1,5 @@
 import './App.css';
+import Layout from './components/Layout';
 import Post from './components/Post';
 import Header from './components/common/Header';
 import { Routes, Route } from 'react-router-dom';
@@ -6,20 +7,10 @@ import { Routes, Route } from 'react-router-dom';
 function App() {
   return (
     <Routes>
-      <Route index element={
-        <main>
-        <Header />
-        <Post />
-      </main>
-      } />
-
-      <Route path={'/login'} element={
-        <main>
-          <Header />
-          <div>Login</div>
-        </main>
-      } />
-
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Post />} />
+        <Route path={'/login'} element={<div>Login</div>} />
+      </Route>
     </Routes>
 
   );

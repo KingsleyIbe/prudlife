@@ -1,4 +1,4 @@
-import image from '../assets/images/card-img-7.png';
+import image from '../../assets/images/card-img-7.png';
 
 const Post = () => {
   return (

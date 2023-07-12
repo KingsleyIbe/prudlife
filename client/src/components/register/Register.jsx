@@ -13,7 +13,7 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log(userData);
+    // console.log('clicked');
     await fetch('http://localhost:4000/register', {
       method: 'POST',
       body: JSON.stringify({username, password}),
@@ -22,6 +22,7 @@ const Register = () => {
       },
     }).then((res) => {
       console.log(res);
+      console.log("data");
     })
   }
 

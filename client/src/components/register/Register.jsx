@@ -21,8 +21,12 @@ const Register = () => {
         'Content-Type': 'application/json',
       },
     }).then((res) => {
-      console.log(res);
-      console.log("data");
+      if (res.ok === true) {
+        console.log(res);
+
+      } else {
+        alert('Registration Failed');
+      }
     })
   }
 

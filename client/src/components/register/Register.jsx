@@ -20,6 +20,8 @@ const Register = () => {
       headers: {
         'Content-Type': 'application/json',
       },
+    }).then((res) => {
+      console.log(res);
     })
   }
 

@@ -1,14 +1,17 @@
 import { Link } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { UserContext } from "../../helpers/UserContext";
 
 const Header = () => {
-  const [username, setUsername] = useState(null);
+
+  const { setUserInfo, userInfo } = useContext(UserContext);
+
   useEffect(() => {
     fetch("http://localhost:4000/profile", {
       credentials: "include",
     }).then((response) => {
       response.json().then((userInfo) => {
-        setUsername(userInfo?.username);
+        setUserInfo(userInfo);
       });
     });
   }, []);
@@ -18,8 +21,10 @@ const Header = () => {
       credentials: 'include',
       method: 'POST',
     })
-    setUsername(null);
+    setUserInfo(null);
   }
+
+  const username = userInfo?.username;
 
   return (
     <header>

@@ -18,6 +18,7 @@ const Header = () => {
       credentials: 'include',
       method: 'POST',
     })
+    setUsername(null);
   }
 
   return (

@@ -13,12 +13,10 @@ const Form = () => {
     await fetch('http://localhost:4000/login', {
       method: 'POST',
       body: JSON.stringify({username, password}),
-      // body: JSON.stringify(userData),
       headers: {
         'Content-Type': 'application/json',
       },
       credentials: 'include',
-    // })
     }).then((res) => {
       if (res.ok === true) {
         console.log(res);

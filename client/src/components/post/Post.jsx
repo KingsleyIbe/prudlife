@@ -9,7 +9,7 @@ const Post = () => {
         <div className="texts">
           <h2>How to become a great developer in less than one year</h2>
           <p className="info">
-            <a className="author">Kingsley Ibe</a>
+            <p className="author">Kingsley Ibe</p>
             <time>2023-07-11 2:45</time>
           </p>
           <p className="summary">How to become a great developer in less than one year, How to become a great developer in less than one year</p>

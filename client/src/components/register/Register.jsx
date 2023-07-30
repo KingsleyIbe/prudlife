@@ -17,7 +17,6 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    // console.log('clicked');
     await fetch('http://localhost:4000/register', {
       method: 'POST',
       // body: JSON.stringify({username, password}),

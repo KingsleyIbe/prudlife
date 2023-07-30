@@ -35,8 +35,6 @@ const Form = () => {
     return <Navigate to={'/'} />
   };
 
-  // console.log(userInfo);
-
   return (
     <form className="login" onSubmit={handleSubmit}>
       <input
